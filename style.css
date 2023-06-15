@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap');
+
+
+:root {
+--Almost-White: hsl(0, 0%, 98%);
+--Medium-Gray: hsl(0, 0%, 41%);
+--Almost-Black: hsl(0, 0%, 8%);
+};
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--Almost-White);
+  font-family: Epilogue;
+}
+/*navbar*/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 25px 20px 0 20px;
+  z-index: 999;
+}
+/*items from navbar*/
+header .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.logo img {
+  margin-right: 1rem;
+}
+
+.navigation .items {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 3rem;
+}
+
+/*mudando a cor dos itens da navbar*/
+.navigation .items li a,
+.login-register ul li a,
+.login-register ul li a button {
+  color: var(--Medium-Gray);
+}
+
+.navigation .items li a:hover,
+.login-register ul li a:hover,
+.login-register ul li a button:hover {
+  cursor: pointer;
+  transition: 0.3s all;
+  color: var(--Almost-Black);
+}
+
+header .navigation ul li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/*div features*/
+.features,
+.company{
+  float: left;
+  overflow: hidden;
+}
+/* itens dentro da div features*/
+.container-items-features,
+.container-items-company {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  margin-top: 0.8rem;
+  padding: 15px 10px 0 0;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/*apos o hover, mostrar a div correspondente*/
+.features:hover .container-items-features {
+  display: block;
+}
+
+.company:hover .container-items-company {
+  display: block;
+}
+/*posicionando as divs dos itens -features e -company*/
+.container-items-features {
+  margin-left: -70px;
+}
+.container-items-company {
+  margin-left: -10px;
+}
+
+.container-items-features ul,
+.container-items-company ul {
+  list-style: none;
+}
+
+.container-items-features ul li,
+.container-items-company ul li {
+  position: relative;
+  right: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.container-items-features ul li a img {
+  margin-right: 0.5rem;
+}
+
+/*login e register from navbar*/
+.login-register {
+  margin-right: 2rem;
+}
+
+.login-register ul {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  list-style: none;
+  gap: 1.5rem;
+}
+.login-register ul li a button {
+  padding: 13px 20px 13px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: var(--Almost-White);
+  border: 0.15rem solid var(--Medium-Gray);
+  border-radius: 1.1rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.learn-more {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 3rem;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.texts h1 {
+  font-size: 5.5rem;
+}
+
+.texts p {
+  width: 50%;
+  margin-top: auto;
+  font-size: 1.2rem;
+  line-height: 1.65rem;
+  color: var(--Medium-Gray);
+}
+
+.learn-more button {
+  width: 150px;
+  height: 55px;
+  border: 1px solid var(--Almost-Black);
+  border-radius: 0.8rem;
+  background-color: var(--Almost-Black);
+  color: var(--Almost-White);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.learn-more button:hover {
+  cursor: pointer;
+  color: var(--Almost-Black);
+  background-color: var(--Almost-White);
+  transition: 0.3s all;
+}
+
+.container-right img {
+  width: 28vw;
+}
+
+.lista-empresas {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.lista-empresas img {
+  width: 5vw;
+  margin-right: 3rem;
+}
+
+.attribution {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--Medium-Gray);
+  font-weight: bold;
+}
